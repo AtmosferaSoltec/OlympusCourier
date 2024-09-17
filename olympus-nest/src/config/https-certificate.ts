@@ -2,9 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 const httpsCertificate = () => {
-  console.log('Si entro a httpsCertificate');
-  
-  const isProduction = process.env.IN_PRODUCTION === 'true';
+  const isProduction = process.env.PRODUCTION === 'true';
   if (!isProduction) {
     return null;
   }
