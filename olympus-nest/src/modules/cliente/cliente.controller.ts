@@ -30,6 +30,8 @@ export class ClienteController {
     @Query('page') page: number = 1,
     @Query('limit') limit: number = 10,
   ) {
+    console.log('Si entra');
+    
     return this.clienteService.findAll(
       activo,
       tipo_doc,

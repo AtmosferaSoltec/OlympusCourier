@@ -8,9 +8,15 @@ const httpsCertificate = () => {
   }
 
   const httpsOptions = {
-    key: fs.readFileSync(path.join(__dirname, '../secrets/private-key.pem')),
+    key: fs.readFileSync(
+      path.join(
+        '/etc/letsencrypt/live/sv-yaaugkfbpu.cloud.elastika.pe/privkey.pem',
+      ),
+    ),
     cert: fs.readFileSync(
-      path.join(__dirname, '../secrets/public-certificate.pem'),
+      path.join(
+        '/etc/letsencrypt/live/sv-yaaugkfbpu.cloud.elastika.pe/fullchain.pem',
+      ),
     ),
   };
   return httpsOptions;
